@@ -1,4 +1,4 @@
-# PR Comment javascript action
+# Comment on PR javascript action
 
 This action can be used to post a dynamic comment on a github PR
 
@@ -12,7 +12,7 @@ with `word-slots` by adding `{}` for each word you want to add.
 ## Example usage
 
 ```yaml
-uses: JoseThen/pr-comment@v1
+uses: JoseThen/comment-on-pr@v1
 with:
   comment: 'This PR is the bees knees!'
 ```
