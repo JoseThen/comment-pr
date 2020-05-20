@@ -1,4 +1,4 @@
-# Comment on PR javascript action
+# Comment PR
 
 This action can be used to post a dynamic comment on a github PR
 
