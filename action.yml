@@ -1,4 +1,7 @@
 name: 'comment-pr'
+branding:
+  icon: 'message-square'
+  color: 'gray-dark'
 description: 'Post a dynamic comment on github PullRequests'
 inputs:
   comment:  # id of input
