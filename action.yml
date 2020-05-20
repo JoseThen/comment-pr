@@ -1,4 +1,4 @@
-name: 'comment-on-pr'
+name: 'comment-pr'
 description: 'Post a dynamic comment on github PullRequests'
 inputs:
   comment:  # id of input

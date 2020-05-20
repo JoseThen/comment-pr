@@ -12,7 +12,7 @@ with `word-slots` by adding `{}` for each word you want to add.
 ## Example usage
 
 ```yaml
-uses: JoseThen/comment-on-pr@v1
+uses: JoseThen/comment-pr@v1
 with:
   comment: 'This PR is the bees knees!'
 ```
