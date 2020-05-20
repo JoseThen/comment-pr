@@ -1,0 +1,10 @@
+name: 'PR Comment'
+description: 'Post a dynamic comment on github PullRequests'
+inputs:
+  comment:  # id of input
+    description: 'Comment you would like to post'
+    required: true
+    default: ''
+runs:
+  using: 'node12'
+  main: 'index.js'
