@@ -8,6 +8,9 @@ inputs:
     description: 'Comment you would like to post'
     required: true
     default: ''
+  GITHUB_TOKEN:
+    description: 'Github Token for authentication'
+    required: true
 runs:
   using: 'node12'
   main: 'dist/index.js'
