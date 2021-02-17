@@ -4,7 +4,7 @@ on: [pull_request]
 
 jobs:
   test:
-    name: Test
+    name: Test Comment
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -15,3 +15,27 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           comment: 'This PR is the bees knees!'
+
+  test-json:
+    name: Test Json
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: set output
+        id: set
+        run: |
+          echo ::set-output name=theJson::$(cat ./test-assets/test.json)
+
+      - name: Test JSON Comment 1
+        uses: ./
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          json: ${{steps.set.outputs.theJson}}
+
+      - name: Test JSON Commment 2
+        uses: ./
+        with:
+          json: '{ "this": "pr", "is": "the", "bees": "knees"}'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
