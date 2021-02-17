@@ -6,7 +6,11 @@ description: 'Post a dynamic comment on github PullRequests'
 inputs:
   comment:  # id of input
     description: 'Comment you would like to post'
-    required: true
+    required: false
+    default: ''
+  json:  # id of input
+    description: 'JSON Code Comment you would like to post'
+    required: false
     default: ''
   GITHUB_TOKEN:
     description: 'Github Token for authentication'
