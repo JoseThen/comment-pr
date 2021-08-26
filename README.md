@@ -1,4 +1,7 @@
 # Comment PR
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This action can be used to post a dynamic comment on a github PR
 
@@ -33,3 +36,23 @@ You need `vercel/ncc` installed with `npm i -g @vercel/ncc` before you can
 compile the logic.
 
 To build just make sure `npm ci` has been run and use `ncc build index.js`
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/ciaranevans"><img src="https://avatars.githubusercontent.com/u/9111975?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ciaran Evans</b></sub></a><br /><a href="https://github.com/JoseThen/comment-pr/commits?author=ciaranevans" title="Documentation">📖</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
