@@ -12,17 +12,22 @@ This action can be used to post a dynamic comment on a github PR
 
 **Optional** A JSON comment you would like to post. Default `''`.
 
+### `GITHUB_TOKEN`
+
+**Required** The value of your GitHub Actions GitHub Token, this is
+usually: `${{ secrets.GITHUB_TOKEN }}`
+
 ## Example usage
 
 ```yaml
-uses: JoseThen/comment-pr@v1
+uses: JoseThen/comment-pr@v1.1.1
 with:
   comment: 'This PR is the bees knees!'
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 ```yaml
-uses: JoseThen/comment-pr@v1
+uses: JoseThen/comment-pr@v1.1.1
 with:
   json: '{ "this": "pr", "is": "the", "bees": "knees"}'
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
