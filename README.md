@@ -1,6 +1,6 @@
 # Comment PR
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This action can be used to post a dynamic comment on a github PR
@@ -62,9 +62,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
-  <tr>
-    <td align="center"><a href="https://github.com/ciaranevans"><img src="https://avatars.githubusercontent.com/u/9111975?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ciaran Evans</b></sub></a><br /><a href="https://github.com/JoseThen/comment-pr/commits?author=ciaranevans" title="Documentation">📖</a></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ciaranevans"><img src="https://avatars.githubusercontent.com/u/9111975?v=4?s=100" width="100px;" alt="Ciaran Evans"/><br /><sub><b>Ciaran Evans</b></sub></a><br /><a href="https://github.com/JoseThen/comment-pr/commits?author=ciaranevans" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/brunooon"><img src="https://avatars.githubusercontent.com/u/25669450?v=4?s=100" width="100px;" alt="Bruno Henrique da Silva"/><br /><sub><b>Bruno Henrique da Silva</b></sub></a><br /><a href="https://github.com/JoseThen/comment-pr/commits?author=brunooon" title="Documentation">📖</a></td>
+    </tr>
+  </tbody>
 </table>
 
 <!-- markdownlint-restore -->
