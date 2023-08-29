@@ -18,7 +18,19 @@ This action can be used to post a dynamic comment on a github PR
 ### `GITHUB_TOKEN`
 
 **Required** The value of your GitHub Actions GitHub Token, this is
-usually: `${{ secrets.GITHUB_TOKEN }}`
+usually: `${{ secrets.GITHUB_TOKEN }}`.
+
+Make sure your `GITHUB_TOKEN` has the proper permissions to write on a pull-request.
+Check [here](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token) how to add permissions if necessary.
+
+## Permissions example
+
+```yaml
+permissions:
+  checks: read
+  contents: read
+  pull-requests: write
+```
 
 ## Example usage
 
