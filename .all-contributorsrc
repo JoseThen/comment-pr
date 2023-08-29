@@ -13,6 +13,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "brunooon",
+      "name": "Bruno Henrique da Silva",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25669450?v=4",
+      "profile": "https://github.com/brunooon",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -20,5 +29,7 @@
   "projectOwner": "JoseThen",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitType": "docs",
+  "commitConvention": "angular"
 }
