@@ -5,7 +5,8 @@ on: [pull_request]
 jobs:
   test:
     name: Test Comment
-    permissions: pull-requests
+    permissions:
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -19,7 +20,8 @@ jobs:
 
   test-json:
     name: Test Json
-    permissions: pull-requests
+    permissions: 
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
