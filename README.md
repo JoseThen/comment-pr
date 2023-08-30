@@ -15,6 +15,10 @@ This action can be used to post a dynamic comment on a github PR
 
 **Optional** A JSON comment you would like to post. Default `''`.
 
+### 'file_path'
+
+**Optional** Path to a file containing `MarkDown` (preffered) syntax with your comment.
+
 ### `GITHUB_TOKEN`
 
 **Required** The value of your GitHub Actions GitHub Token, this is
@@ -35,24 +39,35 @@ permissions:
 ## Example usage
 
 ```yaml
-uses: JoseThen/comment-pr@v1.1.1
+uses: JoseThen/comment-pr@v1.2.0
 with:
   comment: 'This PR is the bees knees!'
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 ```yaml
-uses: JoseThen/comment-pr@v1.1.1
+uses: JoseThen/comment-pr@v1.2.0
 with:
   json: '{ "this": "pr", "is": "the", "bees": "knees"}'
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
+```yaml
+uses: JoseThen/comment-pr@v1.2.0
+with:
+  file_path: './tmp/pr-comment.md'
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
 ## Development
-You need `vercel/ncc` installed with `npm i -g @vercel/ncc` before you can
+
+- You need `vercel/ncc` installed with `npm i -g @vercel/ncc` before you can
 compile the logic.
 
-To build just make sure `npm ci` has been run and use `ncc build index.js`
+- To build just make sure `npm ci` has been run and use `ncc build index.js`
+
+- If you don't want to download `nodejs` and `npm` you can keep this containerized on the fly
+with `docker run --rm -it -v .:/app node:lts bash` and work from the `/app` dir in the container.
 
 ## Contributors ✨
 
