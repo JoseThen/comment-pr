@@ -43,3 +43,9 @@ jobs:
         with:
           json: '{ "this": "pr", "is": "the", "bees": "knees"}'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Test File Commment
+        uses: ./
+        with:
+          file_path: './test-assets/test.md'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

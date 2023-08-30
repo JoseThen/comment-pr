@@ -12,6 +12,10 @@ inputs:
     description: 'JSON Code Comment you would like to post'
     required: false
     default: ''
+  file_path:
+    description: 'Path to file containing comment'
+    required: false
+    default: ''
   GITHUB_TOKEN:
     description: 'Github Token for authentication'
     required: true
