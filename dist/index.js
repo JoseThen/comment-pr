@@ -9813,9 +9813,9 @@ const {getOctokit, context} = __nccwpck_require__(5227);
 const fs = __nccwpck_require__(7147);
 
 try {
-    let json, file_content = null;
+    let file_content = null;
+    let json = core.getInput('json');
     const comment = core.getInput('comment');
-    json = `\`\`\`json\n${core.getInput('json')}\n\`\`\``;
     const file_path = core.getInput('file_path')
     const github_token = core.getInput('GITHUB_TOKEN');
 
@@ -9824,6 +9824,11 @@ try {
     if (context.payload.pull_request == null) {
         core.setFailed('No pull request found.');
         return;
+    }
+    if (json !== '' && !!json) {
+        json = `\`\`\`json\n${json}\n\`\`\``;
+    } else {
+        json = null;
     }
     if (file_path !== '' && !!file_path) {
         try {

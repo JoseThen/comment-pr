@@ -30,7 +30,9 @@ jobs:
       - name: set output
         id: set
         run: |
-          run: echo "theJson=$(cat ./test-assets/test.json)" >> $GITHUB_OUTPUT
+          echo 'theJSON<<EOF' >> $GITHUB_OUTPUT
+          echo "$(cat ./test-assets/test.json)" >> $GITHUB_OUTPUT
+          echo 'EOF' >> $GITHUB_OUTPUT
 
       - name: Test JSON Comment 1
         uses: ./
@@ -42,12 +44,6 @@ jobs:
         uses: ./
         with:
           json: '{ "this": "pr", "is": "the", "bees": "knees"}'
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Test File Commment
-        uses: ./
-        with:
-          file_path: './test-assets/test.md'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   test-file:
