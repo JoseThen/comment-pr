@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Test Regular Comment
         uses: ./
@@ -20,17 +20,19 @@ jobs:
 
   test-json:
     name: Test Json
-    permissions: 
+    permissions:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: set output
         id: set
         run: |
-          echo ::set-output name=theJson::$(cat ./test-assets/test.json)
+          echo 'theJSON<<EOF' >> $GITHUB_OUTPUT
+          echo "$(cat ./test-assets/test.json)" >> $GITHUB_OUTPUT
+          echo 'EOF' >> $GITHUB_OUTPUT
 
       - name: Test JSON Comment 1
         uses: ./
@@ -42,4 +44,19 @@ jobs:
         uses: ./
         with:
           json: '{ "this": "pr", "is": "the", "bees": "knees"}'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  test-file:
+    name: Test File
+    permissions:
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Test File Commment
+        uses: ./
+        with:
+          file_path: './test-assets/test.md'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
