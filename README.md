@@ -15,7 +15,7 @@ This action can be used to post a dynamic comment on a github PR
 
 **Optional** A JSON comment you would like to post. Default `''`.
 
-### 'file_path'
+### `file_path`
 
 **Optional** Path to a file containing `MarkDown` (preffered) syntax with your comment.
 
