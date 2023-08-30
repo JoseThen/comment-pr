@@ -9809,23 +9809,25 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 const core = __nccwpck_require__(8423);
-const github = __nccwpck_require__(5227);
+const {getOctokit, context} = __nccwpck_require__(5227);
 
 try {
     const comment = core.getInput('comment');
     const json = `\`\`\`json\n${core.getInput('json')}\n\`\`\``;
     const github_token = core.getInput('GITHUB_TOKEN');
 
-    const context = github.context;
+    const {owner, repo} = context.repo;
+
     if (context.payload.pull_request == null) {
         core.setFailed('No pull request found.');
         return;
     }
     const pull_request_number = context.payload.pull_request.number;
 
-    const octokit = new github.getOctokit(github_token);
-    const new_comment = octokit.issues.createComment({
-        ...context.repo,
+    const octokit = new getOctokit(github_token);
+    const new_comment = octokit.rest.issues.createComment({
+        owner,
+        repo,
         issue_number: pull_request_number,
         body: (comment === "" ? json : comment),
     });
